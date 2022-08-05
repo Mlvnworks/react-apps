@@ -1,0 +1,168 @@
+/* header */
+header {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    border-bottom: 0.2px solid #444;
+    position: relative;
+}
+
+/* h1(facebook) */
+header h1 {
+    color: white;
+    font-size: 1.75em;
+    text-transform: lowercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* header search form */
+header > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-basis: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header > form > button,
+input {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 10px 10px;
+    color: white;
+    background: none;
+    background-color: #333;
+}
+
+header > form > button {
+    /* padding-left: 13px; */
+    color: #ccc;
+}
+header > form > input {
+    width: 100%;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.89);
+    padding: 11px 10px;
+}
+
+/* header rigth side */
+
+header > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+header > div > div {
+    position: relative;
+    font-size: 1em;
+    color: #ccc;
+}
+
+header > div > div > p {
+    position: absolute;
+    display: none;
+    bottom: -45px;
+    left: -20px;
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 15px;
+}
+
+header > div > div:hover > p {
+    display: unset;
+}
+
+header > div > div > div {
+    position: absolute;
+    background-color: rgb(189, 45, 45);
+    font-size: 0.8em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    top: 0;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > div > div > span {
+    position: absolute;
+    color: white;
+    right: -5px;
+    bottom: 0;
+    z-index: 2;
+}
+
+header > div > div:nth-of-type(1),
+header > div > div:nth-of-type(2) {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header > div > div:nth-of-type(1):hover {
+    background-color: #555;
+}
+
+header > div > div:nth-of-type(2):hover {
+    background-color: #555;
+}
+
+header > div > div > img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    filter: brightness(80%);
+    cursor: pointer;
+}
+header > div > div > img:hover {
+    filter: brightness(100%);
+}
+
+/*  */
+.d-out {
+    display: none;
+}
+/* mobile size */
+@media (min-width: 46em) {
+    header > form:hover > button {
+        background-color: #444;
+    }
+
+    header > form:hover > input {
+        background-color: #444;
+    }
+}
+
+@media (max-width: 45em) {
+    .d-none {
+        display: none;
+    }
+    .rounded {
+        border-radius: 50%;
+    }
+
+    header > form > button {
+        cursor: pointer;
+    }
+    header > form > button:hover {
+        background-color: #444;
+    }
+}
